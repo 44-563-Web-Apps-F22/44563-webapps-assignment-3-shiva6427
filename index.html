@@ -81,7 +81,19 @@ It has a collection of <b> sculptures, paintings, carvings, textiles, manuscript
     <td> Taj Hotel </td>
     <td> 3 Days </td>
     </tr>
-    </table>
+</table>
 
+<hr>
+
+<h2>CODE</h2>
+<blockquote cite=“https://stackoverflow.com/questions/19656103/prevent-hotlinking-image-files”>I want to avoid hotlinking images. Basing of this answer: stackoverflow answer I've tried to add the next snippet code into .htaccess file: but it is not working. When I try to access the images putting the path in the navigation bar, I can access. What am I doing wrong?
+</blockquote >
+    <a href= “https://stackoverflow.com/questions/19656103/prevent-hotlinking-image-files”>https://stackoverflow.com/questions/19656103/prevent-hotlinking-image-files</a>
+<pre>
+    RewriteEngine On
+    RewriteCond %{HTTP_REFERER} !^http://(.+\.)?yourdomain\.com/ [NC]
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteRule .*\.(jpg|gif|bmp|png)$ /images/dontsteal.jpg [L]
+</pre>
 </body>
 </html>
